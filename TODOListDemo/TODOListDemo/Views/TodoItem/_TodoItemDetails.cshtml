@@ -1,0 +1,65 @@
+﻿@model TODOListDemo.Models.TodoItem
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <form class="modal-form" id="form_agenda" action="javascript:void(0)">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×</button>
+        <h3 id="myModalLabel">
+            Details</h3>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="label label-info">
+                    Title:</div>
+            </div>
+            <div class="span9">
+                @Html.DisplayFor(model => model.Title)
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="label label-info">
+                    Start time:</div>
+            </div>
+            <div class="span9">
+                @Html.DisplayFor(model => model.StartTime)
+            </div>
+        </div>
+        @if (Model.Done)
+        {
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="label label-info">
+                        Time finished:</div>
+                </div>
+                <div class="span9">
+                    @Html.DisplayFor(model => model.TimeFinished)
+                </div>
+            </div>
+        }
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="label label-info">
+                    Priority:</div>
+            </div>
+            <div class="span9">
+                @Html.DisplayFor(model => model.Priority)
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="label label-info">
+                    Description:</div>
+            </div>
+            <div class="span9">
+                @Html.DisplayFor(model => model.Description)
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">
+            Close</button>
+    </div>
+</div>

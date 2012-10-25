@@ -1,0 +1,47 @@
+/*Styling calendar events by type*/
+.High div.fc-event-inner, .private div.fc-event-skin
+{
+    color: #333333;
+    background: #ebebf0;
+    border: 1px solid Red;
+}
+.Medium div.fc-event-inner, .public div.fc-event-skin
+{
+    color: #333333;
+    background: #F3F781;
+    border: 1px solid Yellow;
+}
+.Low div.fc-event-inner, .public div.fc-event-skin
+{
+    color: #333333;
+    background: #C8D9ED;
+    border: 1px solid Blue;
+}
+.table-striped tbody tr.highlight td
+{
+    background-color: #BCF5A9;
+}
+/*Styling TODO List*/
+#sortable
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#sortable li
+{
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 1em;
+    height: auto;
+    background-color: #A9D0F5;
+}
+#sortable li span
+{
+    position: absolute;
+    margin-left: -1.3em;
+}
+
+

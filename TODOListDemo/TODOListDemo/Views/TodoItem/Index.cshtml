@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<link href="@Url.Content("~/Content/fullcalendar/fullcalendar.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/pages/todo.css")" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="@Url.Content("~/Scripts/fullcalendar/fullcalendar.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/pages/todo.js")"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="alert alert-error" id="msgError">
+            <p>
+            </p>
+        </div>
+        <div class="alert alert-success" id="msgSuccess">
+            <p>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <button class="btn btn-inverse pull-right" data-toggle="modal" id="new_todo">
+            New task</button>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span6">
+        <div id='calendar'>
+        </div>
+    </div>
+    <div class="span6">
+        <fieldset>
+            <legend>TODO List <a class="btn btn-link" id="view_archive">(View archived list)</a></legend>
+            <div id='todo_list'>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<div class="modal hide fade" id="modalTodo" tabindex="-1" role="dialog">
+</div>
