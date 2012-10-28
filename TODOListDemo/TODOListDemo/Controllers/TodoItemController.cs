@@ -219,6 +219,7 @@ namespace TODOListDemo.Controllers
                     TotalItems = _repositoryTodoItem.Query.Where(c => c.UserId == userId && c.Done == false).Count()
                 }
             };
+            ViewBag.Archive = false;
             return PartialView("_ListOfTodoItems", viewModel);
         }
 
@@ -236,6 +237,7 @@ namespace TODOListDemo.Controllers
                     TotalItems = _repositoryTodoItem.Query.Where(c => c.UserId == userId && c.Done == true).Count()
                 }
             };
+            ViewBag.Archive = true;
             return PartialView("_ListOfTodoItems", viewModel);
         }
         #endregion

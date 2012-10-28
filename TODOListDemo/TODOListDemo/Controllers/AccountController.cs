@@ -46,7 +46,7 @@ namespace TODOListDemo.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "TodoItem");
                     }
                 }
                 else
@@ -67,7 +67,7 @@ namespace TODOListDemo.Controllers
         {
             FormsService.SignOut();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "TodoItem");
         }
 
         // **************************************

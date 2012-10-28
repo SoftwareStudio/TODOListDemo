@@ -5,8 +5,8 @@
         
         <li id="@item.Id" class="row-fluid">
             <div class="span1">
-               @if (!item.Done)
-               { <a class="finish_todo" data-toggle="modal"><i class="@(item.Expired ? "icon-ok" : "icon-warning-sign")"></i></a>}
+                @if (!item.Done)
+                { <a class="finish_todo" data-toggle="modal"><i class="@(item.Expired ? "icon-ok" : "icon-warning-sign")"></i></a>}
             </div>
             <div class="span2">
                 @for (int i = 0; i < (4 - item.PriorityId); i++)
@@ -19,15 +19,17 @@
                 @item.StartTime
             </div>
             <div class="span1">
-            @if (!item.Done)
-            {<a class="edit_todo" data-toggle="modal"><i class="icon-edit"></i></a>}
+                @if (!item.Done)
+                {<a class="edit_todo" data-toggle="modal"><i class="icon-edit"></i></a>}
                 <a class="todo_details" data-toggle="modal"><i class="icon-th-large"></i></a>
             </div>
         </li>                                                                            
     }
 </ul>
-<input type="submit" value="Save list order" class="btn btn-inverse" id="submit-list" />
-
+@if (!ViewBag.Archive)
+{
+    <input type="submit" value="Save list order" class="btn btn-inverse" id="submit-list" />
+}
 @if (Model.SectionInfo.ItemsLoaded < Model.SectionInfo.TotalItems)
 {
     <button class="btn btn-inverse pull-right" id="todo_more">
