@@ -5,3 +5,10 @@ C:\Users\ace\Desktop\todo\TODOListDemo\TODOListDemo\TODOListDemo\bin\EntityFrame
 C:\Users\ace\Desktop\todo\TODOListDemo\TODOListDemo\TODOListDemo\bin\EntityFramework.xml
 C:\Users\ace\Desktop\todo\TODOListDemo\TODOListDemo\TODOListDemo\obj\Debug\TODOListDemo.dll
 C:\Users\ace\Desktop\todo\TODOListDemo\TODOListDemo\TODOListDemo\obj\Debug\TODOListDemo.pdb
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\bin\TODOListDemo.dll
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\bin\TODOListDemo.pdb
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\bin\EntityFramework.dll
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\bin\EntityFramework.xml
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\obj\Debug\TODOListDemo.dll
+C:\Users\ace\Desktop\prijava\TODOListDemo\TODOListDemo\TODOListDemo\obj\Debug\TODOListDemo.pdb

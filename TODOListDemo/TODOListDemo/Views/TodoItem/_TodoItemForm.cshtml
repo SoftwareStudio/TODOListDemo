@@ -1,61 +1,58 @@
 ﻿@model TODOListDemo.Models.TodoItem
-<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <form class="modal-form" id="form_todo" action="javascript:void(0)">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-            ×</button>
-        <h3 id="myModalLabel">
-            Task</h3>
-    </div>
-    <div class="modal-body">
-        <div class="form-horizontal">
-            @Html.ValidationSummary()
-            @Html.HiddenFor(model => model.Id)
-            @Html.HiddenFor(model => model.UserId)
-            @Html.HiddenFor(model => model.Done)
-            @Html.HiddenFor(model => model.SortNum)
-            @Html.HiddenFor(model => model.TimeFinished)
-            <div class="control-group">
-                <label class="control-label">
-                    Title</label>
-                <div class="controls">
-                    @Html.EditorFor(model => model.Title)
-                </div>
+<form class="modal-form" id="form_todo" action="javascript:void(0)">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        ×</button>
+    <h3 id="myModalLabel">
+        Task</h3>
+</div>
+<div class="modal-body">
+    <div class="form-horizontal">
+        @Html.ValidationSummary()
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.UserId)
+        @Html.HiddenFor(model => model.Done)
+        @Html.HiddenFor(model => model.SortNum)
+        @Html.HiddenFor(model => model.TimeFinished)
+        <div class="control-group">
+            <label class="control-label">
+                Title</label>
+            <div class="controls">
+                @Html.EditorFor(model => model.Title)
             </div>
-            <div class="control-group">
-                <label class="control-label">
-                    Start time</label>
-                <div class="controls">
-                    @Html.EditorFor(model => model.StartTime)
-                </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+                Start time</label>
+            <div class="controls">
+                @Html.EditorFor(model => model.StartTime)
             </div>
-            <div class="control-group">
-                <label class="control-label">
-                    Priority</label>
-                <div class="controls">
-                    @Html.DropDownList("PriorityId")
-                </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+                Priority</label>
+            <div class="controls">
+                @Html.DropDownList("PriorityId")
             </div>
-            <div class="control-group">
-                <label class="control-label">
-                    Description</label>
-                <div class="controls">
-                    @Html.TextAreaFor(model => model.Description, new { @cols = 40, @rows = 5 })
-                </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">
+                Description</label>
+            <div class="controls">
+                @Html.TextAreaFor(model => model.Description, new { @cols = 40, @rows = 5 })
             </div>
         </div>
     </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">
-            Close</button>
-        <button class="btn btn-primary" id="submit_todo">
-            Save changes</button>
-        @if (Model.Id != 0)
-        {
-            <button class="btn btn-inverse pull-right" data-toggle="modal" id="delete_todo" todoid="@Model.Id">
-                Delete task</button>
-        }
-    </div>
-    </form>
 </div>
+<div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">
+        Close</button>
+    <button class="btn btn-primary" id="submit_todo">
+        Save changes</button>
+    @if (Model.Id != 0)
+    {
+        <button class="btn btn-inverse pull-right" data-toggle="modal" id="delete_todo" todoid="@Model.Id">
+            Delete task</button>
+    }
+</div>
+</form>

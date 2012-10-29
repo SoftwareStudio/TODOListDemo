@@ -42,7 +42,10 @@ namespace TODOListDemo.Controllers
         public ActionResult Edit(int id)
         {
             TodoItem todoItem = _repositoryTodoItem.Query.FirstOrDefault(c => c.Id == id);
-
+            if (todoItem.Done == true)
+            {
+                return PartialView("_TodoItemDetails", todoItem);
+            }
             if (todoItem == null)
             {
                 todoItem = new TodoItem();
@@ -107,6 +110,11 @@ namespace TODOListDemo.Controllers
                 {
                     if (todoItem.Id == 0)
                     {
+                        if (String.IsNullOrEmpty(todoItem.Title))
+                        {
+                            Message = "Title field must not be empty";
+                            return Json(new { Success = false, Msg = Message });
+                        }
                         Message = "Task was successfully created!";
                         _repositoryTodoItem.Add(todoItem);
                     }
@@ -126,7 +134,7 @@ namespace TODOListDemo.Controllers
                 }
                 else
                 {
-                    Message = "You have not entered all data or have entered data in invalid form. Please try again! If problem persists contact Administrator!";
+                    Message = "You have entered data in invalid form. Common problem is invalid datetime. Preferred datetime format is: dd:mm:yyyy hh:mm.";
                 }
             }
             catch (DataException)
@@ -196,7 +204,7 @@ namespace TODOListDemo.Controllers
                     _repositoryTodoItem.Edit(todoItem);
                 }
                 _repositoryTodoItem.SaveChanges();
-                return Json(new { Success = true, Msg = "List was successfully sorted!" });
+                return Json(new { Success = true, Msg = "List was successfully sorted but tasks whose time has past and newly created tasks are always showed on top regardless of your preffered order." });
             }
             catch (DataException)
             {
