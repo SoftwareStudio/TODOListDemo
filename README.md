@@ -1,16 +1,18 @@
 TODOListDemo
 ============
 Basic TODO List Demonstration application.
+
 Functionalities:
-- multiuser system with registration and email confirmation
-- adding, editing, viewing and deleting tasks
+- multi-user system with registration and email confirmation
+- adding, editing, viewing, archiving and deleting tasks
 - tasks prioritised in 3 levels: high, medium, low
-- user enabled sorting of tasks with drag and drop funcionalities (exception: tasks whose time has passed and newly added tasks always show on top of preferred user order or default order, default ordering: highest priority first then start time)
-- view of archived(done) and active tasks
+- user enabled sorting of tasks with drag and drop functionalities (exception: tasks whose time has passed and newly added tasks always show on top of preferred user order or default order, default ordering: highest priority first then start time)
+- view of archived (done) and active tasks
 - show more button on TODO List (default view shows 20 tasks)
-- ajax loading of changes on page
+- Ajax loading of changes on page
 
 Whole project was made in Microsoft Visual Web Developer Express 2010. (http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express)
+
 Technologies used: 
 - ASP.Net MVC 3 (http://www.asp.net/mvc/mvc3)
 - Ninject (http://www.ninject.org/)
@@ -27,7 +29,7 @@ Tested with:
 - Safari version 5.1.7
 
 Fixed bugs:
-- In Internet Explorer popup dialogs do not work correctly. They show up but they dissappear with click within a browser so forms cannot be filled. (fix date: 30/10/2012)
+- In Internet Explorer popup dialogs do not work correctly. They show up, but they disappear with click within a browser so forms cannot be filled. (fix date: 30/10/2012)
 
 Preview of app:
  - default view: http://i48.tinypic.com/153wqw8.jpg
